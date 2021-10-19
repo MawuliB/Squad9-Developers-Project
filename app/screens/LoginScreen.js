@@ -1,10 +1,12 @@
-import React from 'react'
-import { Dimensions, Alert, TouchableOpacity, TextInput, ImageBackground, StyleSheet, Text, View } from 'react-native'
+import * as React from 'react'
+import { Pressable, Dimensions, Alert, TouchableOpacity, TextInput, ImageBackground, StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}) {
     return (
 
+        <SafeAreaView>
         <ImageBackground 
         resizeMode='stretch'
         source={require('../assets/home.jpg')} 
@@ -33,17 +35,18 @@ export default function LoginScreen() {
                     <Text style={styles.forgot}>Forgot Password?</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.loginBtn}>
+                <Pressable onPress={() => navigation.navigate("Home")} style={styles.loginBtn}>
                     <Text style={styles.loginText}>LOGIN</Text>
-                </TouchableOpacity>
+                </Pressable>
                 
-                <TouchableOpacity>
-                    <Text style={styles.loginText}>Already Have An Account? Signup</Text>
-                </TouchableOpacity>
+                <Pressable>
+                    <Text onPress={() => navigation.navigate("SignUp")} style={styles.loginText}>Already Have An Account? Signup</Text>
+                </Pressable>
                 
             </View>
 
         </ImageBackground>
+        </SafeAreaView>
     )
 }
 
@@ -51,7 +54,6 @@ export default function LoginScreen() {
 
 const styles = StyleSheet.create({
     home: {
-        top: 20,
         height: "100%",
         width: "100%",
         alignItems: "center",
