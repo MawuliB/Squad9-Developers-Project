@@ -16,7 +16,7 @@ export default function LoginScreen({navigation}) {
                     <TextInput  
                         style={styles.inputText}
                         placeholder="Email..." 
-                        placeholderTextColor="#003f5c"
+                        placeholderTextColor="white"
                         autoCompleteType={'email'}
                         keyboardType={'email-address'}
                         selectionColor={"aqua"}
@@ -26,7 +26,7 @@ export default function LoginScreen({navigation}) {
                     <TextInput  
                         style={styles.inputText}
                         placeholder="Password..." 
-                        placeholderTextColor="#003f5c"
+                        placeholderTextColor="white"
                         secureTextEntry={true}
                         autoCompleteType={'password'}
                         />
@@ -35,13 +35,13 @@ export default function LoginScreen({navigation}) {
                     <Text style={styles.forgot}>Forgot Password?</Text>
                 </TouchableOpacity>
 
-                <Pressable onPress={() => navigation.navigate("Home")} style={styles.loginBtn}>
+                <TouchableOpacity onPress={() => navigation.navigate("Home")} style={styles.loginBtn}>
                     <Text style={styles.loginText}>LOGIN</Text>
-                </Pressable>
+                </TouchableOpacity>
                 
-                <Pressable>
+                <TouchableOpacity>
                     <Text onPress={() => navigation.navigate("SignUp")} style={styles.loginText}>Already Have An Account? Signup</Text>
-                </Pressable>
+                </TouchableOpacity>
                 
             </View>
 
@@ -76,7 +76,8 @@ const styles = StyleSheet.create({
         },
     forgot: {
         color:"white",
-        fontSize:13
+        fontSize:13,
+        marginTop: 20
         },
     loginBtn: {
             width:"50%",

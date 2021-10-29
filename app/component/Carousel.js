@@ -51,7 +51,7 @@ function infiniteScroll(dataList, mySlide) {
 
 
 
-    }, 9000)
+    }, 20000)
 
 }
 

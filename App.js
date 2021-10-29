@@ -7,7 +7,11 @@ import LoginScreen from './app/screens/LoginScreen';
 import SignUpScreen from './app/screens/SignUpScreen';
 import HomeScreen from './app/screens/HomeScreen'
 import AboutScreen from './app/screens/AboutScreen';
-import Content from './app/component/Content';
+import Contact from './app/screens/Contact';
+import Message from './app/screens/Message';
+import FAQ from './app/screens/FAQ';
+import Gallery from './app/screens/Gallery';
+import Services from './app/screens/Services';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +23,11 @@ export default function App() {
       <Stack.Screen name="SignUp" component={SignUpScreen} options={{headerShown: false}} />
       <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
       <Stack.Screen name="About" component={AboutScreen} options={{headerShown: false}} />
+      <Stack.Screen name="Contact" component={Contact} options={{headerShown: false}} />
+      <Stack.Screen name="Message" component={Message} options={{headerShown: false}} />
+      <Stack.Screen name="FAQ" component={FAQ} options={{headerShown: false}} />
+      <Stack.Screen name="Gallery" component={Gallery} options={{headerShown: false}} />
+      <Stack.Screen name="Services" component={Services} options={{headerShown: false}} />
     </Stack.Navigator>
   </NavigationContainer>
   );

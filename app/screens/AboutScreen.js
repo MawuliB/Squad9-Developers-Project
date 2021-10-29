@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 
 export default function AboutScreen() {
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.main} >
             <ScrollView>
             <Text> Welcome to BB,s Bridal.
                 We deal in anything related to weddings, hair and many more.
@@ -15,5 +15,9 @@ export default function AboutScreen() {
 }
 
 const styles = StyleSheet.create({
+    main: {
+        margin: 20,
+        
+    }
 
 })
